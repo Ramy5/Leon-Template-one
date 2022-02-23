@@ -1,0 +1,14 @@
+// mixin for prefixes 
+@mixin prefixer($property, $value, $prefixes:()) {
+    @each $prefix in $prefixes {
+        #{"-" + $prefix + "-" + $property}: $value;
+    }
+    #{$property}: $value;
+}
+
+// mixin for grid 
+@mixin grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 70px;
+}

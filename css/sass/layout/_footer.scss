@@ -1,0 +1,42 @@
+// start footer 
+
+footer {
+    .container {
+        @media #{$maxMobail} {
+            display: block;
+            text-align: center;
+        }
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $shapeColor;
+        width: 100%;
+        color: $backColor;
+        p {
+            @media #{$maxMobail} {
+                &:first-of-type {
+                    margin: 0;
+                    padding-top: 16px;
+                }
+                &:last-of-type {
+                    margin-bottom: 0;
+                    padding-bottom: 16px;
+                }
+            }
+            &:last-of-type {
+                font-weight: bold;
+            }
+            span {
+                color: $mainColor;
+                font-weight: bold;
+            }
+            &:last-of-type {
+                span {
+                    @include prefixer(animation, color ease-in-out 1s infinite alternate, webkit moz ms o);
+                }
+            }
+        }
+    }
+}
+
+// end footer 

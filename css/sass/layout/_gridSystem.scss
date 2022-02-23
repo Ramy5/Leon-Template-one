@@ -1,0 +1,72 @@
+.container {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+
+    padding: {
+        left: 20px;
+        right: 20px;
+    }
+
+    // small
+    @media #{$minSmall} {
+        width: 750px;
+    }
+
+    // medium
+    @media #{$minMedium} {
+        width: 970px;
+    }
+
+    // large
+    @media #{$minLarge} {
+        width: 1170px;
+    }
+}
+
+* {
+    @include prefixer(box-sizing, border-box, webkit moz o ms);
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+// animation for third p color and h in loading
+@keyframes color {
+    from {
+        color: $mainColor;
+    }
+
+    to {
+        color: $shapeColor;
+    }
+}
+
+
+// animation for image filter in services
+@keyframes gray-an {
+    from {
+        filter: grayscale(100%);
+    }
+
+    to {
+        filter: grayscale(0);
+    }
+}
+
+// animation for image filter in about
+@keyframes blur-an {
+    from {
+        filter: blur(3px);
+    }
+
+    to {
+        filter: blur(0);
+    }
+}

@@ -1,0 +1,60 @@
+@charset "UTF-8";
+header .container nav ul {
+  position: absolute;
+  left: 0;
+  right: auto;
+}
+header .container nav ul::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: auto;
+}
+
+.setting .close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  border-top-left-radius: 10px;
+}
+.setting .hSetting::before {
+  content: "👈";
+  margin-left: 5px;
+}
+
+.service .service-content .images::after {
+  content: "";
+  position: absolute;
+  top: -28px;
+  left: -35px;
+  right: auto;
+}
+
+.portfolio .container .portfolio-content .project {
+  background-image: linear-gradient(to left, #fff 20%, #f1f1f1 40%, #eee 60%, #ddd 80%, #ccc 100%);
+}
+
+@media (max-width: 767px) {
+  .about .about-content .about-image {
+    position: relative;
+    left: auto;
+    right: 25px;
+  }
+}
+.about .about-content .about-image::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -30px;
+  right: auto;
+}
+.about .about-content .about-image::before {
+  content: "";
+  position: absolute;
+  left: -100px;
+  right: auto;
+}
+
+/*# sourceMappingURL=homePage-rtl.css.map */

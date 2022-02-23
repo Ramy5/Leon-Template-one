@@ -1,0 +1,14 @@
+.main-p {
+    @media #{$maxMobail} {
+        font-size: 17px;
+        margin-bottom: 40px;
+    }
+    @media #{$minSmall} {
+        font-size: 18px;
+        margin-bottom: $mainPadding + 20px;
+    }
+    margin: 0;
+    text-align: center;
+    margin-top: -30px;
+    color: $secondryColor;
+}

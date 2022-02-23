@@ -1,0 +1,89 @@
+// start header 
+
+header {
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background-color: $backColor;
+    border-bottom: 1px solid #ccc;
+    z-index: 1000;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            img {
+                width: 60px;
+                height: 26px;
+            }
+        }
+        nav {
+            position: relative;
+            padding: 10px;
+            .icon {
+                cursor: pointer;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                width: 30px;
+                span {
+                    background-color: #333;
+                    height: 4px;
+                }
+                span:not(:last-of-type) {
+                    margin-bottom: 4px;
+                }
+                span:not(:nth-of-type(2)) {
+                    width: 100%;
+                    
+                }
+                span:nth-of-type(2) {
+                    width: 60%;
+                    @include prefixer(transition, all .4s linear, webkit moz o ms);
+                }
+                &:hover span:nth-of-type(2) {
+                    width: 100%;
+                }
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                position: absolute;
+                top: calc(100% + 20px);
+                right: 0;
+                background-color: #f6f6f6;
+                min-width: 200px;
+                display: none;
+                z-index: 10;
+                &::before {
+                    content: "";
+                    border-width: 15px;
+                    border-style: solid;
+                    border-color: transparent transparent #f6f6f6 transparent;
+                    position: absolute;
+                    top: -30px;
+                    right: 0;
+                }
+                li {
+                    a {
+                        display: block;
+                        padding: 15px;
+                        text-decoration: none;
+                        color: #333;
+                        @include prefixer(transition, all .3s linear, webkit moz o ms);
+                    }
+                    &:hover a {
+                        padding-left: 25px;
+                        background-color: #ddd;
+                    }
+                    &:not(:last-of-type) a {
+                        border-bottom: 1px solid #ccc;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// end header 
